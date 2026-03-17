@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+/* ── Cosmic Dark Theme Variables ──────────────────────────── */
+:root {
+  --cosmic-bg: #0A0A1A;
+  --cosmic-surface: #0F0F2A;
+  --cosmic-purple: #6C63FF;
+  --cosmic-cyan: #00D4FF;
+  --cosmic-gold: #FFD700;
+  --cosmic-teal: #1D9E75;
+  --cosmic-coral: #D85A30;
+  --cosmic-gray: #888780;
+  --cosmic-graylt: #D3D1C7;
+}
+
+/* ── Body Defaults ────────────────────────────────────────── */
+body {
+  background-color: var(--cosmic-bg);
+  color: var(--cosmic-graylt);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cosmic-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--cosmic-purple);
+  border-radius: 3px;
+}
+
+/* ── Helper Classes ───────────────────────────────────────── */
+.glow-text {
+  text-shadow: 0 0 10px rgba(108, 99, 255, 0.6);
+}
+
+.glass-panel {
+  background: rgba(15, 15, 42, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(108, 99, 255, 0.15);
+  border-radius: 12px;
+}
+
+.cosmic-card {
+  background: rgba(15, 15, 42, 0.5);
+  border: 1px solid rgba(108, 99, 255, 0.1);
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.cosmic-card:hover {
+  border-color: rgba(108, 99, 255, 0.35);
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.15);
+}
